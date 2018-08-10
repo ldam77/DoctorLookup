@@ -1,6 +1,5 @@
 
-export function searchDoctors(name, symptom){
-  let location = 'wa-seattle';
+export function searchDoctors(location, name, symptom){
   return new Promise(function(resolve, reject) {
     let request = new XMLHttpRequest();
     let url = `https://api.betterdoctor.com/2016-03-01/doctors?name=${name}&query=${symptom}&location=${location}&skip=0&limit=10&user_key=${process.env.exports.apiKey}`;

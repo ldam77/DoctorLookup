@@ -9,10 +9,11 @@ $(document).ready(function() {
     event.preventDefault();
     $("#output").text("");
     $("#error").text("");
+    let city = $("#city").val();
     let searchName = $("#name").val();
     let symptom = $("#symptom").val();
 
-    let promise = searchDoctors(searchName, symptom);
+    let promise = searchDoctors(city, searchName, symptom);
     promise.then(function(response) {
       let body = JSON.parse(response);
       if (body.data.length === 0) {
