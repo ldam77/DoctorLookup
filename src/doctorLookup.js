@@ -1,5 +1,5 @@
 
-export function searchByName(name, symptom){
+export function searchDoctors(name, symptom){
   let location = 'wa-seattle';
   return new Promise(function(resolve, reject) {
     let request = new XMLHttpRequest();
